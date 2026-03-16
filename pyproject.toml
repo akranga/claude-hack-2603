@@ -29,10 +29,8 @@ claude-hack-2603 = "claude_hack_2603.cli:cli"
 requires = ["hatchling>=1.21.0"]
 build-backend = "hatchling.build"
 
-[tool.uv]
-# Development-time dependencies only (not included for end users)
-# Add more with: uv add --dev <pkg>
-"dev-dependencies" = [
+[dependency-groups]
+dev = [
     "pytest>=8.2.0",
     "ruff>=0.5.0"
 ]
