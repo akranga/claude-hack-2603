@@ -1,4 +1,4 @@
-# claude-hack-2603
+# Claude Code Hackathon
 
 Personal experiments and proofs-of-concept for AI automation and assistant orchestration using Claude and related tools.
 
