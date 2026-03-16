@@ -37,18 +37,6 @@ This repository contains:
 - **npm** 10.9+ (for JavaScript dependency management)
 
 ### Environment Setup
-
-```bash
-# Load environment
-direnv allow
-
-# Verify setup
-uv --version
-npm --version
-```
-
-## Getting Started
-
 ### 1. Clone and Install
 
 ```bash
