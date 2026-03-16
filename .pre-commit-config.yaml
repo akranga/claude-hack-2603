@@ -3,33 +3,57 @@ repos:
     rev: v2.7.2
     hooks:
       - id: conventional-commits
+        name: Conventional Commits Checker
+        description: Enforce conventional commit message format (type(scope): message)
         stages: ["commit-msg"]
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
     hooks:
       - id: trailing-whitespace
+        name: Trim Trailing Whitespace
+        description: Remove trailing whitespace from files
       - id: end-of-file-fixer
+        name: Fix End of File
+        description: Ensure files end with exactly one newline
       - id: check-yaml
+        name: Check YAML
+        description: Validate YAML file syntax
       - id: check-added-large-files
+        name: Check for Large Files
+        description: Prevent accidentally committing large binary files
       - id: check-case-conflict
+        name: Check for Case Conflicts
+        description: Prevent files with conflicting case sensitivity
       - id: check-merge-conflict
+        name: Check for Merge Conflicts
+        description: Detect merge conflict markers in files
       - id: check-json
+        name: Check JSON
+        description: Validate JSON file syntax
       - id: check-toml
+        name: Check TOML
+        description: Validate TOML file syntax
       - id: detect-private-key
+        name: Detect Private Keys
+        description: Prevent committing private keys and secrets
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.8.4
     hooks:
       - id: ruff
+        name: Ruff Linter
+        description: Fast Python linter - check for code issues and auto-fix
         args: [--fix]
       - id: ruff-format
+        name: Ruff Formatter
+        description: Fast Python code formatter - enforce consistent style
 
   - repo: local
     hooks:
       - id: trufflehog
         name: TruffleHog Secret Scanning
-        description: Detect secrets in your data with TruffleHog
+        description: Detect secrets and sensitive data in your code with TruffleHog
         entry: uv run trufflehog --regex --entropy=False .
         language: system
         stages: ["pre-commit"]
