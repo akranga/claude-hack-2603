@@ -1,0 +1,36 @@
+repos:
+  - repo: https://github.com/qoomon/git-conventional-commits
+    rev: v2.7.2
+    hooks:
+      - id: conventional-commits
+        stages: ["commit-msg"]
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-json
+      - id: check-toml
+      - id: detect-private-key
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.8.4
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+
+  - repo: local
+    hooks:
+      - id: trufflehog
+        name: TruffleHog Secret Scanning
+        description: Detect secrets in your data with TruffleHog
+        entry: uv run trufflehog --regex --entropy=False .
+        language: system
+        stages: ["pre-commit"]
+        pass_filenames: false
