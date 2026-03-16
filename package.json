@@ -10,7 +10,9 @@
     "codemie": "codemie",
     "codemie:setup": "codemie setup",
     "codemie:doctor": "codemie doctor",
-    "codemie:install:claude": "codemie install claude --supported"
+    "codemie:install:claude": "codemie install claude --supported",
+    "codemie:analyze": "codemie-code \"Analyze this codebase\"",
+    "claude": "codemie-claude"
   },
   "keywords": [],
   "author": "akranga",

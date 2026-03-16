@@ -54,11 +54,35 @@ uv sync
 npm run codemie:install:claude
 ```
 
-### 2. Available Commands
+### 2. Install Claude Code Agent
+
+```bash
+# Install Claude Code via Codemie (version-managed)
+npm run codemie:install:claude
+```
+
+### 3. Use AI Agents
+
+```bash
+# Run the built-in CodeMie agent (no install needed)
+npm run codemie:analyze
+# or interactively:
+npx codemie-code
+
+# Run Claude Code (after installing)
+npm run claude
+# or with a task:
+npx codemie-claude "Review my code"
+```
+
+### 4. Available Commands
 
 ```bash
 # Run tests
 npm test
+
+# Health check
+npm run doctor
 
 # Linting (Python)
 uv run ruff check .
