@@ -16,7 +16,6 @@
   "author": "akranga",
   "license": "MIT",
   "dependencies": {
-    "@anthropic-ai/claude-code": "latest",
     "@codemieai/code": "latest"
   },
   "devDependencies": {}

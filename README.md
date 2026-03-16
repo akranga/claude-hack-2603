@@ -49,6 +49,9 @@ npm install
 
 # Install Python dependencies (if using Python)
 uv sync
+
+# Install Claude Code via Codemie (recommended)
+npm run codemie:install:claude
 ```
 
 ### 2. Available Commands
