@@ -13,7 +13,5 @@
     "@anthropic-ai/claude-code": "latest",
     "@codemieai/code": "github:codemie-ai/codemie-code"
   },
-  "devDependencies": {
-    "pre-commit": "^1.2.2"
-  }
+  "devDependencies": {}
 }
