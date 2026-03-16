@@ -16,19 +16,14 @@ This repository contains:
 ```
 .
 ├── .editorconfig                    # Editor configuration (indentation, charset)
-├── .envrc                           # direnv configuration (auto-loads environment)
 ├── .gitignore                       # Git ignore rules (node_modules, .env, etc)
 ├── .pre-commit-config.yaml          # Pre-commit hook configuration
-├── .github/                         # GitHub workflows and configuration
-│   ├── copilot-instructions.md      # Copilot-specific instructions
-│   └── skills/                      # Copilot skills directory
 ├── .tool-versions                   # Tool version management (asdf)
 ├── LICENSE                          # MIT License
 ├── README.md                         # Project documentation (this file)
 ├── package.json                      # npm dependencies and scripts
 ├── package-lock.json                # Locked npm package versions
-├── pyproject.toml                   # Python project configuration (uv)
-└── node_modules/                    # npm dependencies (generated)
+└── pyproject.toml                   # Python project configuration (uv)
 ```
 
 ## Prerequisites
@@ -82,40 +77,6 @@ uv run ruff format .
 # Pytest (Python)
 uv run pytest
 ```
-
-## Dependencies
-
-### JavaScript/TypeScript
-- **@anthropic-ai/claude-code** - Anthropic Claude code generation
-- **@codemieai/code** - Codemie code integration (from GitHub)
-
-### Python (Development)
-- **pytest** 8.2.0+ - Testing framework
-- **ruff** 0.5.0+ - Fast Python linter and formatter
-
-## Development Workflow
-
-### Pre-commit Hooks
-
-Pre-commit hooks enforce code quality standards:
-
-```bash
-# Install hooks
-cd .github && git config core.hooksPath .githooks
-
-# Run manually on all files
-npm run lint
-uv run pre-commit run --all-files
-```
-
-### Environment Variables
-
-`.envrc` automatically exports:
-- `GITHUB_TOKEN` - GitHub authentication
-- `ANTHROPIC_MODEL` - Claude 3.7 Sonnet (Bedrock)
-- `ANTHROPIC_SMALL_FAST_MODEL` - Claude 3.5 Haiku
-- `CLAUDE_CODE_USE_BEDROCK` - Enable Bedrock integration
-- `DISABLE_PROMPT_CACHING` - Prompt cache control
 
 ## Project Configuration
 
