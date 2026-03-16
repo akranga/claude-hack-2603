@@ -4,14 +4,20 @@
   "description": "Personal experiments and proofs-of-concept",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "codemie setup",
+    "doctor": "codemie doctor",
+    "codemie": "codemie",
+    "codemie:setup": "codemie setup",
+    "codemie:doctor": "codemie doctor",
+    "codemie:install:claude": "codemie install claude --supported"
   },
   "keywords": [],
   "author": "akranga",
   "license": "MIT",
   "dependencies": {
     "@anthropic-ai/claude-code": "latest",
-    "@codemieai/code": "github:codemie-ai/codemie-code"
+    "@codemieai/code": "latest"
   },
   "devDependencies": {}
 }

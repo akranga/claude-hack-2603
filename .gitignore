@@ -18,3 +18,5 @@ venv/
 .mypy_cache/*
 .cursor
 .vscode/launch.json
+.codemie/
+.codemie/
