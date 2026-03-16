@@ -30,14 +30,13 @@ This repository contains:
 
 ### Required Tools
 
+- **asdf** - Version manager for multiple languages and tools
 - **Node.js** 23.10+ (via asdf or direct installation)
 - **Python** 3.12+ (for project configuration)
 - **UV** package manager (for Python dependency management)
 - **npm** 10.9+ (for JavaScript dependency management)
 
 ### Environment Setup
-
-`.envrc` provides automatic environment configuration via direnv:
 
 ```bash
 # Load environment
