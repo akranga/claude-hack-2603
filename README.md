@@ -15,20 +15,20 @@ This repository contains:
 
 ```
 .
-├── .github/
-│   ├── copilot-instructions.md
-│   └── skills/
-│       └── make-skill/
-│           └── SKILL.md
-├── .editorconfig
-├── .gitignore
-├── .tool-versions
-├── LICENSE
-├── README.md
-├── package.json
-├── package-lock.json
-├── pyproject.toml
-└── node_modules/
+├── .editorconfig                    # Editor configuration (indentation, charset)
+├── .envrc                           # direnv configuration (auto-loads environment)
+├── .gitignore                       # Git ignore rules (node_modules, .env, etc)
+├── .pre-commit-config.yaml          # Pre-commit hook configuration
+├── .github/                         # GitHub workflows and configuration
+│   ├── copilot-instructions.md      # Copilot-specific instructions
+│   └── skills/                      # Copilot skills directory
+├── .tool-versions                   # Tool version management (asdf)
+├── LICENSE                          # MIT License
+├── README.md                         # Project documentation (this file)
+├── package.json                      # npm dependencies and scripts
+├── package-lock.json                # Locked npm package versions
+├── pyproject.toml                   # Python project configuration (uv)
+└── node_modules/                    # npm dependencies (generated)
 ```
 
 ## Prerequisites
