@@ -84,6 +84,11 @@ npm test
 # Health check
 npm run doctor
 
+# View Claude Code Best Practices slides
+npm run slides
+# Slides will open at http://localhost:3000/slides.html
+# Or directly open: file:///path/to/claude-hack-2603/docs/slides.html
+
 # Linting (Python)
 uv run ruff check .
 uv run ruff format .
