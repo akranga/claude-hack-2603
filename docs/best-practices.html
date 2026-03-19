@@ -568,6 +568,30 @@
     pointer-events: none;
     opacity: 0.12;
   }
+
+  /* QR code */
+  .qr-container {
+    margin-top: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .qr-container canvas,
+  .qr-container img {
+    border-radius: 10px;
+    padding: 8px;
+    background: #e8e6e3;
+    display: block;
+  }
+
+  .qr-label {
+    font-size: 0.72rem;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
 </style>
 </head>
 <body>
@@ -586,6 +610,10 @@
     <h1>Claude Code<br>Best Practices</h1>
     <p class="subtitle">10 patterns to get the most out of agentic coding</p>
     <span class="badge">5-MINUTE TALK</span>
+    <div class="qr-container">
+      <div id="title-qr"></div>
+      <div class="qr-label">akranga.github.io/claude-hack-2603</div>
+    </div>
   </div>
 
   <!-- ========== SLIDE 1: Introduce Yourself ========== -->
@@ -967,7 +995,19 @@
 
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
+(function () {
+  new QRCode(document.getElementById('title-qr'), {
+    text: 'https://akranga.github.io/claude-hack-2603/',
+    width: 130,
+    height: 130,
+    colorDark: '#0f0f13',
+    colorLight: '#e8e6e3',
+    correctLevel: QRCode.CorrectLevel.M
+  });
+})();
+
 (function () {
   const slides = document.querySelectorAll('.slide');
   const total = slides.length;
