@@ -20,3 +20,6 @@ venv/
 .vscode/launch.json
 .codemie/
 .codemie/
+.playwright-cli/
+credentials.json
+

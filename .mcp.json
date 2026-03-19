@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"],
+      "transport": "stdio"
+    },
+    "context7": {
+      "url": "https://mcp.context7.com/mcp",
+      "transport": "http"
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": ["chrome-devtools-mcp@latest"],
+      "transport": "stdio"
+    }
+  }
+}

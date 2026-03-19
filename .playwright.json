@@ -1,0 +1,13 @@
+{
+  "browser": {
+    "browserName": "chromium",
+    "codegen": "none",
+    "launchOptions": {
+      "executablePath": "/Applications/Comet.app/Contents/MacOS/Comet",
+      "proxy": {
+        "server": "http://localhost:9000"
+      },
+      "headless": false
+    }
+  }
+}

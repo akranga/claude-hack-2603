@@ -18,7 +18,11 @@
   "author": "akranga",
   "license": "MIT",
   "dependencies": {
-    "@codemieai/code": "latest"
+    "@anthropic-ai/claude-code": "latest",
+    "@playwright/cli": "latest",
+    "@playwright/mcp": "latest",
+    "skillfish": "latest"
   },
-  "devDependencies": {}
+  "devDependencies": {
+  }
 }

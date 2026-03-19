@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "skills": [
+    "anthropics/claude-code/plugins/plugin-dev/skills/agent-development",
+    "anthropics/claude-code/plugins/plugin-dev/skills/hook-development",
+    "anthropics/claude-code/plugins/plugin-dev/skills/skill-development",
+    "pytorch/pytorch/.claude/skills/skill-writer"
+  ]
+}
