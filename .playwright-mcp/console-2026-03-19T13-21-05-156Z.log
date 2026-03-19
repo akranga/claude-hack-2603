@@ -1,0 +1,24 @@
+[   23286ms] SyntaxError: Failed to execute 'add' on 'DOMTokenList': The token provided must not be empty.
+    at go (https://akranga.github.io/claude-hack-2603/:808:31)
+    at HTMLDocument.<anonymous> (https://akranga.github.io/claude-hack-2603/:832:10)
+[   23951ms] SyntaxError: Failed to execute 'add' on 'DOMTokenList': The token provided must not be empty.
+    at go (https://akranga.github.io/claude-hack-2603/:808:31)
+    at HTMLDocument.<anonymous> (https://akranga.github.io/claude-hack-2603/:832:10)
+[   25914ms] SyntaxError: Failed to execute 'add' on 'DOMTokenList': The token provided must not be empty.
+    at go (https://akranga.github.io/claude-hack-2603/:808:31)
+    at HTMLDocument.<anonymous> (https://akranga.github.io/claude-hack-2603/:832:10)
+[   26518ms] SyntaxError: Failed to execute 'add' on 'DOMTokenList': The token provided must not be empty.
+    at go (https://akranga.github.io/claude-hack-2603/:808:31)
+    at HTMLDocument.<anonymous> (https://akranga.github.io/claude-hack-2603/:832:10)
+[   26742ms] SyntaxError: Failed to execute 'add' on 'DOMTokenList': The token provided must not be empty.
+    at go (https://akranga.github.io/claude-hack-2603/:808:31)
+    at HTMLDocument.<anonymous> (https://akranga.github.io/claude-hack-2603/:832:10)
+[   27574ms] SyntaxError: Failed to execute 'add' on 'DOMTokenList': The token provided must not be empty.
+    at go (https://akranga.github.io/claude-hack-2603/:808:31)
+    at HTMLDocument.<anonymous> (https://akranga.github.io/claude-hack-2603/:832:10)
+[   28746ms] SyntaxError: Failed to execute 'add' on 'DOMTokenList': The token provided must not be empty.
+    at go (https://akranga.github.io/claude-hack-2603/:808:31)
+    at HTMLDocument.<anonymous> (https://akranga.github.io/claude-hack-2603/:832:10)
+[   29321ms] SyntaxError: Failed to execute 'add' on 'DOMTokenList': The token provided must not be empty.
+    at go (https://akranga.github.io/claude-hack-2603/:808:31)
+    at HTMLDocument.<anonymous> (https://akranga.github.io/claude-hack-2603/:832:10)

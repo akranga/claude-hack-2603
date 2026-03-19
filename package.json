@@ -13,7 +13,7 @@
     "codemie:install:claude": "codemie install claude --supported",
     "codemie:analyze": "codemie-code \"Analyze this codebase\"",
     "claude": "codemie-claude",
-    "slides": "npx http-server docs -p 3000 -o slides.html"
+    "slides": "npx http-server docs -p 3000 -o best-practices.html"
   },
   "keywords": [],
   "author": "akranga",

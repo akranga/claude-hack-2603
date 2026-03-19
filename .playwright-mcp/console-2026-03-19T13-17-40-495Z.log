@@ -1,0 +1,22 @@
+[     184ms] [ERROR] Error: Couldn't get stack or message from error hint
+    at getErrorIdFromHint (chrome://resources/perplexity/libs/sentry.js:42:18)
+    at #onBeforeSend (chrome://resources/perplexity/libs/sentry.js:236:29)
+    at chrome://resources/perplexity/npm/@sentry/browser.js:1:71914
+    at chrome://resources/perplexity/npm/@sentry/browser.js:1:72212
+    at Array.<anonymous> (chrome://resources/perplexity/npm/@sentry/browser.js:1:17558)
+    at chrome://resources/perplexity/npm/@sentry/browser.js:1:18284
+    at Array.forEach (<anonymous>)
+    at Ue._executeHandlers (chrome://resources/perplexity/npm/@sentry/browser.js:1:18233)
+    at chrome://resources/perplexity/npm/@sentry/browser.js:1:17642
+    at new Ue (chrome://resources/perplexity/npm/@sentry/browser.js:1:17430)
+    at Ue.then (chrome://resources/perplexity/npm/@sentry/browser.js:1:17503)
+    at Uo._processEvent (chrome://resources/perplexity/npm/@sentry/browser.js:1:71615)
+    at Uo._captureEvent (chrome://resources/perplexity/npm/@sentry/browser.js:1:71006)
+    at Uo.captureEvent (chrome://resources/perplexity/npm/@sentry/browser.js:1:67321)
+    at ge.captureEvent (chrome://resources/perplexity/npm/@sentry/browser.js:1:14446)
+    at Jt (chrome://resources/perplexity/npm/@sentry/browser.js:1:32209)
+    at chrome://resources/perplexity/npm/@sentry/browser.js:1:93359
+    at kn (chrome://resources/perplexity/npm/@sentry/browser.js:1:35476)
+    at Mn.C.onunhandledrejection (chrome://resources/perplexity/npm/@sentry/browser.js:1:35989) @ chrome://resources/perplexity/npm/@sentry/browser.js:0
+[     190ms] The play() request was interrupted by a call to pause(). https://goo.gl/LdLk22
+[     418ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ https://akranga.github.io/claude-hack-2603/:0

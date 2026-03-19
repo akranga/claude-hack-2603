@@ -41,8 +41,9 @@ They're **complementary**, but skills have advantages:
 - Loaded on demand — **zero context cost** when not invoked
 - Faster to create than spinning up an MCP server
 - Portable — install across teams with **Skillfish**: `npx skillfish add owner/repo`
+- Wrap skills into a **plugin** for org-wide distribution and versioning
 
-**Meta-skill:** use a skill-builder skill to create new skills. Bootstrap your library.
+**Meta-skill:** use a skill-builder skill to create new skills. Bootstrap a shared library that compounds across your whole team.
 
 Claude can learn unfamiliar CLIs from `--help`.
 
@@ -67,6 +68,11 @@ When a task is specific — don't stuff it into CLAUDE.md. Create a **subagent**
 | Distill repeatable patterns here | When you need isolated execution |
 
 **Examples:** code-reviewer (read-only, Sonnet), debugger (with Edit, Opus), security-scanner (Haiku, fast)
+
+**Code Review with Claude:**
+- Create a review subagent that checks style, bugs, and security
+- Use in CI/CD for automated PR review
+- Pair human review with Claude review — Claude catches mechanical issues, you focus on design
 
 > When subagents repeat the same patterns → distill into a Skill. That's where compounding happens.
 
@@ -105,11 +111,20 @@ Claude Code performs well with XP-style practices. The canonical loop:
 > **#1 leverage point from Anthropic:** give Claude a way to verify its own work.
 > Tests, screenshots, expected outputs. Without verification — you're the only feedback loop.
 
+**Make Claude self-verifiable:** set up conditions where Claude can check its own work — run on an emulator, inspect logs, compare screenshots, validate API responses. The more it can verify autonomously, the less you become the bottleneck.
+
+**Hooks — guaranteed checks:**
+- Pre/post command hooks run automatically before or after Claude's actions
+- Guarantee linting, tests, or security checks happen on every change
+- Configure in `.claude/hooks/` — Claude can't skip what's automated
+
 Use `/rewind` (or `Esc+Esc`) for checkpoints. After 2 failed corrections → `/clear` and start fresh with a better prompt.
 
 ---
 
 ## 7. Manage Context Aggressively (~30s)
+
+**Guiding principle:** give Claude the **minimum context sufficient** for the task. Don't overload — every extra file or instruction dilutes focus.
 
 Context window = your most important resource. It fills fast, performance degrades.
 
@@ -118,6 +133,8 @@ Context window = your most important resource. It fills fast, performance degrad
 - Subagents for investigation (they explore in separate context)
 - `/btw` for side questions that don't enter history
 - `--continue` / `--resume` to pick up where you left off
+
+**Multi-project setup:** use `/add-dir` to bring in additional project directories, or launch Claude from a parent folder containing your subprojects. Reason across repos without polluting context permanently.
 
 > A clean session with a better prompt always beats a long session with accumulated corrections.
 
@@ -159,10 +176,10 @@ Start a task on your laptop, **continue from anywhere** — phone, tablet, web.
 
 1. **Introduce yourself** — auto memory tailors Claude to your habits
 2. **CLAUDE.md** — persistent context, keep it lean
-3. **Skills + CLI** — domain knowledge, zero context cost, not MCP
-4. **Subagents** — specialized workers → distill into skills
+3. **Skills + CLI** — share as plugins, zero context cost
+4. **Subagents** — code review, specialized workers → distill into skills
 5. **Spec-driven** — for teams ready for full lifecycle
-6. **Explore → Plan → Code → Verify** — XP meets AI
-7. **Manage context** — `/clear`, `/compact`, subagents
+6. **Explore → Plan → Code → Verify** — hooks guarantee checks
+7. **Manage context** — minimal sufficient, `/clear`, `/add-dir`
 8. **Tune IQ** — right model + right reasoning for the task
 9. **Remote Control** — start on laptop, continue from anywhere (Enterprise)
