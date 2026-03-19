@@ -23,7 +23,10 @@ This repository contains:
 ├── README.md                         # Project documentation (this file)
 ├── package.json                      # npm dependencies and scripts
 ├── package-lock.json                # Locked npm package versions
-└── pyproject.toml                   # Python project configuration (uv)
+├── pyproject.toml                   # Python project configuration (uv)
+└── docs/
+    ├── slides.html                  # Claude Code Best Practices slide deck
+    └── claude-code-best-practices.md # Talk notes
 ```
 
 ## Prerequisites
@@ -83,6 +86,12 @@ npm test
 
 # Health check
 npm run doctor
+
+# View Claude Code Best Practices slides
+npm run slides
+# Slides will open at http://localhost:3000/slides.html
+# Or directly open: file:///path/to/claude-hack-2603/docs/slides.html
+# Or view online: https://akranga.github.io/claude-hack-2603/
 
 # Linting (Python)
 uv run ruff check .

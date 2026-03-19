@@ -12,13 +12,18 @@
     "codemie:doctor": "codemie doctor",
     "codemie:install:claude": "codemie install claude --supported",
     "codemie:analyze": "codemie-code \"Analyze this codebase\"",
-    "claude": "codemie-claude"
+    "claude": "codemie-claude",
+    "slides": "npx http-server docs -p 3000 -o slides.html"
   },
   "keywords": [],
   "author": "akranga",
   "license": "MIT",
   "dependencies": {
-    "@codemieai/code": "latest"
+    "@anthropic-ai/claude-code": "latest",
+    "@playwright/cli": "latest",
+    "@playwright/mcp": "latest",
+    "skillfish": "latest"
   },
-  "devDependencies": {}
+  "devDependencies": {
+  }
 }
