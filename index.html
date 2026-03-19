@@ -498,6 +498,7 @@
   .recap-list li:nth-child(7) .rnum { background: rgba(96,165,250,0.15); color: var(--accent3); }
   .recap-list li:nth-child(8) .rnum { background: rgba(96,165,250,0.15); color: var(--accent3); }
   .recap-list li:nth-child(9) .rnum { background: rgba(52,211,153,0.15); color: var(--accent4); }
+  .recap-list li:nth-child(10) .rnum { background: rgba(212,165,116,0.15); color: var(--accent); }
 
   /* Progress bar */
   .progress-bar {
@@ -583,7 +584,7 @@
     <div class="bg-glow" style="width:400px;height:400px;background:#c084fc;bottom:-10%;left:-5%;"></div>
     <div class="logo">&#9672;</div>
     <h1>Claude Code<br>Best Practices</h1>
-    <p class="subtitle">9 patterns to get the most out of agentic coding</p>
+    <p class="subtitle">10 patterns to get the most out of agentic coding</p>
     <span class="badge">5-MINUTE TALK</span>
   </div>
 
@@ -591,7 +592,7 @@
   <div class="slide" data-slide="1">
     <div class="bg-glow" style="width:420px;height:420px;background:#34d399;top:5%;right:-6%;"></div>
     <div class="stagger">
-      <div class="slide-num">01 / 09 &mdash; ~30s</div>
+      <div class="slide-num">01 / 10 &mdash; ~30s</div>
       <h2><span class="icon">&#128075;</span> Introduce Yourself to Claude</h2>
 
       <div class="two-col">
@@ -623,7 +624,7 @@
   <div class="slide" data-slide="2">
     <div class="bg-glow" style="width:400px;height:400px;background:#d4a574;top:10%;right:-5%;"></div>
     <div class="stagger">
-      <div class="slide-num">02 / 09 &mdash; ~60s</div>
+      <div class="slide-num">02 / 10 &mdash; ~60s</div>
       <h2><span class="icon">&#128221;</span> Context Engineering: CLAUDE.md First</h2>
 
       <div class="two-col">
@@ -660,7 +661,7 @@
   <div class="slide" data-slide="3">
     <div class="bg-glow" style="width:420px;height:420px;background:#34d399;bottom:0;right:-6%;"></div>
     <div class="stagger">
-      <div class="slide-num">03 / 09 &mdash; ~45s</div>
+      <div class="slide-num">03 / 10 &mdash; ~45s</div>
       <h2><span class="icon">&#9889;</span> Skills + CLI Tools over MCPs</h2>
 
       <div class="three-col">
@@ -698,7 +699,7 @@
   <div class="slide" data-slide="4">
     <div class="bg-glow" style="width:450px;height:450px;background:#c084fc;bottom:5%;right:-8%;"></div>
     <div class="stagger">
-      <div class="slide-num">04 / 09 &mdash; ~45s</div>
+      <div class="slide-num">04 / 10 &mdash; ~45s</div>
       <h2><span class="icon">&#129302;</span> Subagents: Specialized Workers</h2>
 
       <div class="two-col">
@@ -732,11 +733,44 @@
     </div>
   </div>
 
-  <!-- ========== SLIDE 5: Spec-Driven ========== -->
+  <!-- ========== SLIDE 5: Code Review ========== -->
   <div class="slide" data-slide="5">
+    <div class="bg-glow" style="width:420px;height:420px;background:#34d399;top:8%;left:-6%;"></div>
+    <div class="stagger">
+      <div class="slide-num">05 / 10 &mdash; ~30s</div>
+      <h2><span class="icon">&#128269;</span> /review &mdash; Code Review with Claude</h2>
+
+      <div class="two-col">
+        <div class="col-text">
+          <ul>
+            <li><code>/review</code> &mdash; built-in command, analyzes changes instantly</li>
+            <li>Create a <strong>review subagent</strong> &mdash; read-only, Sonnet, own context</li>
+            <li>Claude catches <strong>mechanical issues</strong>: style, bugs, security</li>
+            <li>You focus on <strong>design and intent</strong> &mdash; what Claude can't judge</li>
+            <li>Run in <strong>CI/CD</strong>: <code>claude --print -p "Review this PR"</code></li>
+          </ul>
+        </div>
+        <div class="visual-card grad3">
+          <div style="font-size:0.8rem;color:var(--muted);margin-bottom:0.8rem;text-transform:uppercase;letter-spacing:0.1em;">Review Agent Setup</div>
+          <div class="flow" style="flex-direction:column;align-items:stretch;gap:0.6rem;">
+            <div class="flow-step" style="justify-content:center;"><div class="step-icon">&#128221;</div> <div><code>.claude/agents/code-reviewer.md</code></div></div>
+            <div style="text-align:center;color:var(--muted);font-size:1.2rem;">&darr;</div>
+            <div class="flow-step" style="justify-content:center;"><div class="step-icon">&#128274;</div> <div><strong>Read-only</strong> permissions &mdash; no edits</div></div>
+            <div style="text-align:center;color:var(--muted);font-size:1.2rem;">&darr;</div>
+            <div class="flow-step" style="justify-content:center;"><div class="step-icon">&#9989;</div> <div>Structured output: critical / major / minor</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout" style="border-left-color:var(--accent4);">Pair Claude review with human review. <strong>Iterate on your review agent</strong> &mdash; when it misses things, update the instructions.</div>
+    </div>
+  </div>
+
+  <!-- ========== SLIDE 6: Spec-Driven ========== -->
+  <div class="slide" data-slide="6">
     <div class="bg-glow" style="width:400px;height:400px;background:#60a5fa;top:5%;left:-8%;"></div>
     <div class="stagger">
-      <div class="slide-num">05 / 09 &mdash; ~30s</div>
+      <div class="slide-num">06 / 10 &mdash; ~30s</div>
       <h2><span class="icon">&#128203;</span> Not Everyone Is Ready for Spec-Driven Dev</h2>
 
       <div class="two-col">
@@ -762,11 +796,11 @@
     </div>
   </div>
 
-  <!-- ========== SLIDE 6: Explore Plan Code Verify ========== -->
-  <div class="slide" data-slide="6">
+  <!-- ========== SLIDE 7: Explore Plan Code Verify ========== -->
+  <div class="slide" data-slide="7">
     <div class="bg-glow" style="width:450px;height:450px;background:#d4a574;top:-5%;left:-5%;"></div>
     <div class="stagger">
-      <div class="slide-num">06 / 09 &mdash; ~45s</div>
+      <div class="slide-num">07 / 10 &mdash; ~45s</div>
       <h2><span class="icon">&#128260;</span> Explore &rarr; Plan &rarr; Code &rarr; Verify</h2>
 
       <div class="flow">
@@ -796,11 +830,11 @@
     </div>
   </div>
 
-  <!-- ========== SLIDE 7: Manage Context ========== -->
-  <div class="slide" data-slide="7">
+  <!-- ========== SLIDE 8: Manage Context ========== -->
+  <div class="slide" data-slide="8">
     <div class="bg-glow" style="width:400px;height:400px;background:#c084fc;top:10%;right:-6%;"></div>
     <div class="stagger">
-      <div class="slide-num">07 / 09 &mdash; ~30s</div>
+      <div class="slide-num">08 / 10 &mdash; ~30s</div>
       <h2><span class="icon">&#129504;</span> Manage Context Aggressively</h2>
 
       <p style="font-size:clamp(0.9rem,1.5vw,1.1rem);color:var(--muted);margin-bottom:1.2rem;"><strong style="color:var(--text);">Principle:</strong> give Claude the <strong style="color:var(--accent);">minimum sufficient context</strong> for the task. Every extra file or instruction dilutes focus.</p>
@@ -840,11 +874,11 @@
     </div>
   </div>
 
-  <!-- ========== SLIDE 8: Model IQ ========== -->
-  <div class="slide" data-slide="8">
+  <!-- ========== SLIDE 9: Model IQ ========== -->
+  <div class="slide" data-slide="9">
     <div class="bg-glow" style="width:400px;height:400px;background:#34d399;bottom:5%;left:-8%;"></div>
     <div class="stagger">
-      <div class="slide-num">08 / 09 &mdash; ~30s</div>
+      <div class="slide-num">09 / 10 &mdash; ~30s</div>
       <h2><span class="icon">&#129504;</span> Tune the Model IQ</h2>
 
       <div class="model-cards">
@@ -876,11 +910,11 @@
     </div>
   </div>
 
-  <!-- ========== SLIDE 9: Remote Control ========== -->
-  <div class="slide" data-slide="9">
+  <!-- ========== SLIDE 10: Remote Control ========== -->
+  <div class="slide" data-slide="10">
     <div class="bg-glow" style="width:420px;height:420px;background:#60a5fa;top:8%;left:-6%;"></div>
     <div class="stagger">
-      <div class="slide-num">09 / 09 &mdash; ~20s</div>
+      <div class="slide-num">10 / 10 &mdash; ~20s</div>
       <h2><span class="icon">&#128225;</span> Claude Remote Control</h2>
 
       <div class="two-col">
@@ -908,24 +942,25 @@
     </div>
   </div>
 
-  <!-- ========== SLIDE 10: Recap ========== -->
-  <div class="slide" data-slide="10">
+  <!-- ========== SLIDE 11: Recap ========== -->
+  <div class="slide" data-slide="11">
     <div class="bg-glow" style="width:500px;height:500px;background:#d4a574;top:-15%;right:-10%;"></div>
     <div class="bg-glow" style="width:400px;height:400px;background:#c084fc;bottom:-10%;left:-5%;"></div>
     <div class="stagger">
       <div class="slide-num">RECAP</div>
-      <h2 style="background:var(--gradient1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">9 Practices to Remember</h2>
+      <h2 style="background:var(--gradient1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">10 Practices to Remember</h2>
 
       <ul class="recap-list">
         <li><span class="rnum">1</span> <span><strong>Introduce yourself</strong> &mdash; auto memory tailors Claude to your habits</span></li>
         <li><span class="rnum">2</span> <span><strong>CLAUDE.md</strong> &mdash; persistent context, keep it lean</span></li>
         <li><span class="rnum">3</span> <span><strong>Skills + CLI</strong> &mdash; share as plugins, zero context cost</span></li>
-        <li><span class="rnum">4</span> <span><strong>Subagents</strong> &mdash; code review, specialized workers &rarr; distill into skills</span></li>
-        <li><span class="rnum">5</span> <span><strong>Spec-driven</strong> &mdash; for teams ready for full lifecycle</span></li>
-        <li><span class="rnum">6</span> <span><strong>Explore &rarr; Plan &rarr; Code &rarr; Verify</strong> &mdash; hooks guarantee checks</span></li>
-        <li><span class="rnum">7</span> <span><strong>Manage context</strong> &mdash; minimal sufficient, <code>/clear</code>, <code>/add-dir</code></span></li>
-        <li><span class="rnum">8</span> <span><strong>Tune IQ</strong> &mdash; right model + right reasoning for the task</span></li>
-        <li><span class="rnum">9</span> <span><strong>Remote Control</strong> &mdash; start on laptop, continue from anywhere (Enterprise)</span></li>
+        <li><span class="rnum">4</span> <span><strong>Subagents</strong> &mdash; specialized workers &rarr; distill into skills</span></li>
+        <li><span class="rnum">5</span> <span><strong>/review</strong> &mdash; pair Claude + human review, automate in CI</span></li>
+        <li><span class="rnum">6</span> <span><strong>Spec-driven</strong> &mdash; for teams ready for full lifecycle</span></li>
+        <li><span class="rnum">7</span> <span><strong>Explore &rarr; Plan &rarr; Code &rarr; Verify</strong> &mdash; hooks guarantee checks</span></li>
+        <li><span class="rnum">8</span> <span><strong>Manage context</strong> &mdash; minimal sufficient, <code>/clear</code>, <code>/add-dir</code></span></li>
+        <li><span class="rnum">9</span> <span><strong>Tune IQ</strong> &mdash; right model + right reasoning for the task</span></li>
+        <li><span class="rnum">10</span> <span><strong>Remote Control</strong> &mdash; start on laptop, continue from anywhere (Enterprise)</span></li>
       </ul>
     </div>
   </div>
