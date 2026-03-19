@@ -78,7 +78,28 @@ When a task is specific — don't stuff it into CLAUDE.md. Create a **subagent**
 
 ---
 
-## 5. Not Everyone Is Ready for Spec-Driven Dev (~30s)
+## 5. /review — Code Review with Claude (~30s)
+
+Claude Code has a built-in `/review` command. Use it.
+
+- `/review` — analyzes staged/unstaged changes or a specific PR instantly
+- Create a **review subagent**: `.claude/agents/code-reviewer.md` — read-only, Sonnet, own context
+- Claude catches **mechanical issues**: style violations, bugs, security gaps
+- You focus on **design and intent** — what Claude can't judge
+- Run in **CI/CD**: `claude --print -p "Review this PR"` in GitHub Actions
+
+**Review agent setup:**
+1. Create `.claude/agents/code-reviewer.md` with read-only permissions
+2. Use structured output: critical / major / minor severity
+3. Iterate on instructions — when it misses things, update the agent
+
+See [REVIEW.md](../REVIEW.md) for detailed review guidelines and checklists.
+
+> Pair Claude review with human review. **Iterate on your review agent** — when it misses things, update the instructions.
+
+---
+
+## 6. Not Everyone Is Ready for Spec-Driven Dev (~30s)
 
 The full workflow: **Interview → Spec → Fresh Session → Implement → Iterate**
 
@@ -99,7 +120,7 @@ The full workflow: **Interview → Spec → Fresh Session → Implement → Iter
 
 ---
 
-## 6. Explore → Plan → Code → Verify (~45s)
+## 7. Explore → Plan → Code → Verify (~45s)
 
 Claude Code performs well with XP-style practices. The canonical loop:
 
@@ -122,7 +143,7 @@ Use `/rewind` (or `Esc+Esc`) for checkpoints. After 2 failed corrections → `/c
 
 ---
 
-## 7. Manage Context Aggressively (~30s)
+## 8. Manage Context Aggressively (~30s)
 
 **Guiding principle:** give Claude the **minimum context sufficient** for the task. Don't overload — every extra file or instruction dilutes focus.
 
@@ -140,7 +161,7 @@ Context window = your most important resource. It fills fast, performance degrad
 
 ---
 
-## 8. Tune the Model IQ (~30s)
+## 9. Tune the Model IQ (~30s)
 
 Match model to task complexity:
 
@@ -158,7 +179,7 @@ Use `/model` to switch mid-session as task complexity changes.
 
 ---
 
-## 9. Claude Remote Control (~20s)
+## 10. Claude Remote Control (~20s)
 
 Start a task on your laptop, **continue from anywhere** — phone, tablet, web.
 
@@ -177,9 +198,10 @@ Start a task on your laptop, **continue from anywhere** — phone, tablet, web.
 1. **Introduce yourself** — auto memory tailors Claude to your habits
 2. **CLAUDE.md** — persistent context, keep it lean
 3. **Skills + CLI** — share as plugins, zero context cost
-4. **Subagents** — code review, specialized workers → distill into skills
-5. **Spec-driven** — for teams ready for full lifecycle
-6. **Explore → Plan → Code → Verify** — hooks guarantee checks
-7. **Manage context** — minimal sufficient, `/clear`, `/add-dir`
-8. **Tune IQ** — right model + right reasoning for the task
-9. **Remote Control** — start on laptop, continue from anywhere (Enterprise)
+4. **Subagents** — specialized workers → distill into skills
+5. **/review** — pair Claude + human review, automate in CI
+6. **Spec-driven** — for teams ready for full lifecycle
+7. **Explore → Plan → Code → Verify** — hooks guarantee checks
+8. **Manage context** — minimal sufficient, `/clear`, `/add-dir`
+9. **Tune IQ** — right model + right reasoning for the task
+10. **Remote Control** — start on laptop, continue from anywhere (Enterprise)
